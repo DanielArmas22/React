@@ -10,5 +10,5 @@ class MusicSerializer(serializers.ModelSerializer):
         #     'artist',
         #     'release_date',
         # )
-        models = Music
+        model= Music
         fields = '__all__' # all fields
