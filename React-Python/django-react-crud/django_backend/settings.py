@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders', # for cross origin requests  (comunicate with react)
     'rest_framework',  # apis for rest
-    'musics'
+    'coreapi', # for the coreapi
+    'musics', # app for the model
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # cors authorization
 CORS_ALLOWED_ORIGINS = [
 ]
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
+}
