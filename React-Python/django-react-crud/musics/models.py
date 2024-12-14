@@ -9,3 +9,6 @@ class Music(models.Model):
     release_date = models.DateField()
     credit = models.TextField(blank=True)
     liked = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.title
